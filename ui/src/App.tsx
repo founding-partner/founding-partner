@@ -1,30 +1,43 @@
-import type { Component } from "solid-js";
-import { createEffect, createSignal } from "solid-js";
+import { Component, createSignal, onMount, onCleanup } from "solid-js";
 import Background from "./components/Background";
 import Title from "./components/Title";
+import Description from "./components/Description";
 import ScrollDown from "./components/ScrollDown";
 
 const App: Component = () => {
-  const [scrollPosition, setScrollPosition] = createSignal(0);
+  const [scrollPos, setScrollPos] = createSignal(0);
 
-  createEffect(() => {
-    const onScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-    window.addEventListener("scroll", onScroll);
+  const handleScroll = () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+    const documentHeight = document.documentElement.scrollHeight;
 
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
+    const totalScroll = scrollTop + windowHeight;
+    // when there is a scroll, then lets consider that the page has been scrolled till its window height. otherwise, it will be zero.
+    const scrollPercent = scrollTop > 0 ? totalScroll / documentHeight : 0;
+
+    // console.log("scrollPercent", { scrollPercent });
+    setScrollPos(scrollPercent);
+  };
+
+  onMount(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+  // window.addEventListener("scroll", handleScroll);
+
+  onCleanup(() => {
+    window.removeEventListener("scroll", handleScroll);
   });
 
   return (
-    <div class="relative">
+    <div class="text-white">
       <Background>
-        <Title scrollPosition={scrollPosition()} />
+        <Title scrollPosition={scrollPos()} />
+        <Description />
+        <Description />
+        <ScrollDown scrollPosition={scrollPos()} />
       </Background>
-      
-      <ScrollDown />
     </div>
   );
 };
