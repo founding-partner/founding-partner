@@ -1,0 +1,25 @@
+{
+  "name": "founding-partner",
+  "version": "1.0.0",
+  "description": "The Social Network for Startups",
+  "private": true,
+  "workspaces": [
+    "ui"
+  ],
+  "scripts": {
+    "publish": "node scripts/publish.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarreraPHP/founding-partner.git"
+  },
+  "keywords": [],
+  "author": "CarreraPHP",
+  "bugs": {
+    "url": "https://github.com/CarreraPHP/founding-partner/issues"
+  },
+  "homepage": "https://github.com/CarreraPHP/founding-partner#readme",
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}

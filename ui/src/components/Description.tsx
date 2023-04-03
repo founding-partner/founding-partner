@@ -2,7 +2,7 @@ import type { Component } from "solid-js";
 
 const Description: Component = () => {
   return (
-    <div class={"transform pl-0 md:pl-[50%] pb-10 w-full snap-center"}>
+    <div class={"transform pl-0 md:pl-[50%] pb-10 w-full snap-center min-h-screen"}>
       <div class="m-4 p-4 font-poppins text-xl text-transparent bg-clip-text text-justify border-0 rounded-3xl bg-gradient-radial from-sky-500 via-sky-600 to-sky-500">
         <p>
           Founding-Partner is a social media platform designed for entrepreneurs
