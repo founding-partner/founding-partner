@@ -35,7 +35,6 @@ const App: Component = () => {
       <Background>
         <Title scrollPosition={scrollPos()} />
         <Description />
-        <Description />
         <ScrollDown scrollPosition={scrollPos()} />
       </Background>
     </div>

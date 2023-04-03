@@ -1,18 +1,22 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/three': ^0.150.0
   autoprefixer: ^10.4.14
   postcss: ^8.4.21
   solid-js: ^1.6.10
   tailwindcss: ^3.2.7
+  three: ^0.150.1
   typescript: ^4.9.5
   vite: ^4.1.1
   vite-plugin-solid: ^2.5.0
 
 dependencies:
   solid-js: 1.6.10
+  three: 0.150.1
 
 devDependencies:
+  '@types/three': 0.150.0
   autoprefixer: 10.4.14_postcss@8.4.21
   postcss: 8.4.21
   tailwindcss: 3.2.7_postcss@8.4.21
@@ -594,6 +598,23 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@types/stats.js/0.17.0:
+    resolution: {integrity: sha512-9w+a7bR8PeB0dCT/HBULU2fMqf6BAzvKbxFboYhmDtDkKPiyXYbjoe2auwsXlEFI7CFNMF1dCv3dFH5Poy9R1w==}
+    dev: true
+
+  /@types/three/0.150.0:
+    resolution: {integrity: sha512-AGhnz/pfV9lajfPMrzRyP/nySpZYfpoXdayGk0Tiwkzc6hsWOCkz/Q696Muxn9HV2EkQJ3u8g/dDt7jcP5Tecg==}
+    dependencies:
+      '@types/stats.js': 0.17.0
+      '@types/webxr': 0.5.1
+      fflate: 0.6.10
+      lil-gui: 0.17.0
+    dev: true
+
+  /@types/webxr/0.5.1:
+    resolution: {integrity: sha512-xlFXPfgJR5vIuDefhaHuUM9uUgvPaXB6GKdXy2gdEh8gBWQZ2ul24AJz3foUd8NNKlSTQuWYJpCb1/pL81m1KQ==}
+    dev: true
+
   /acorn-node/1.8.2:
     resolution: {integrity: sha512-8mt+fslDufLYntIoPAaIMUe/lrbrehIiwmR3t2k9LljIzoigEPF27eLk2hy8zSGzmR/ogr7zbRKINMo1u0yh5A==}
     dependencies:
@@ -862,6 +883,10 @@ packages:
       reusify: 1.0.4
     dev: true
 
+  /fflate/0.6.10:
+    resolution: {integrity: sha512-IQrh3lEPM93wVCEczc9SaAOvkmcoQn/G8Bo1e8ZPlY3X3bnAxWaBdvTdvM1hP62iZp0BXWDy4vTAy4fF0+Dlpg==}
+    dev: true
+
   /fill-range/7.0.1:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
     engines: {node: '>=8'}
@@ -974,6 +999,10 @@ packages:
     resolution: {integrity: sha512-46Tk9JiOL2z7ytNQWFLpj99RZkVgeHf87yGQKsIkaPz1qSH9UczKH1rO7K3wgRselo0tYMUNfecYpm/p1vC7tQ==}
     engines: {node: '>=6'}
     hasBin: true
+    dev: true
+
+  /lil-gui/0.17.0:
+    resolution: {integrity: sha512-MVBHmgY+uEbmJNApAaPbtvNh1RCAeMnKym82SBjtp5rODTYKWtM+MXHCifLe2H2Ti1HuBGBtK/5SyG4ShQ3pUQ==}
     dev: true
 
   /lilconfig/2.1.0:
@@ -1249,6 +1278,10 @@ packages:
     transitivePeerDependencies:
       - ts-node
     dev: true
+
+  /three/0.150.1:
+    resolution: {integrity: sha512-5C1MqKUWaHYo13BX0Q64qcdwImgnnjSOFgBscOzAo8MYCzEtqfQqorEKMcajnA3FHy1yVlIe9AmaMQ0OQracNA==}
+    dev: false
 
   /to-fast-properties/2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
