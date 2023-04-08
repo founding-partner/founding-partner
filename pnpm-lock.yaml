@@ -10,6 +10,7 @@ importers:
 
   ui:
     specifiers:
+      '@tweenjs/tween.js': ^19.0.0
       '@types/three': ^0.150.0
       autoprefixer: ^10.4.14
       postcss: ^8.4.21
@@ -20,6 +21,7 @@ importers:
       vite: ^4.1.1
       vite-plugin-solid: ^2.5.0
     dependencies:
+      '@tweenjs/tween.js': 19.0.0
       solid-js: 1.7.1
       three: 0.150.1
     devDependencies:
@@ -630,6 +632,10 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
     dev: true
+
+  /@tweenjs/tween.js/19.0.0:
+    resolution: {integrity: sha512-QVbvSlnP7FcjKr1edg460BbUlpdGzmIOfvpsvHCj3JPIVZ9S9KeQLk9mB24VlDzPIl/a/ehAZPE95xFsmqm+pQ==}
+    dev: false
 
   /@types/babel__core/7.20.0:
     resolution: {integrity: sha512-+n8dL/9GWblDO0iU6eZAwEIJVr5DWigtle+Q6HLOrh/pdbXOhOtqzq8VPPE2zvNJzSKY4vH/z3iT3tn0A3ypiQ==}
