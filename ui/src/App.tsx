@@ -1,8 +1,8 @@
 import { Component, createSignal, onMount, onCleanup } from "solid-js";
 import Background from "./components/Background";
-import Title from "./components/Title";
 import Description from "./components/Description";
 import ScrollDown from "./components/ScrollDown";
+import Hero from "./components/Hero";
 
 const App: Component = () => {
   const [scrollPos, setScrollPos] = createSignal(0);
@@ -24,7 +24,6 @@ const App: Component = () => {
   onMount(() => {
     window.addEventListener("scroll", handleScroll);
   });
-  // window.addEventListener("scroll", handleScroll);
 
   onCleanup(() => {
     window.removeEventListener("scroll", handleScroll);
@@ -33,7 +32,7 @@ const App: Component = () => {
   return (
     <div class="text-white">
       <Background>
-        <Title scrollPosition={scrollPos()} />
+        <Hero scrollPosition={scrollPos()} />
         <Description />
         <ScrollDown scrollPosition={scrollPos()} />
       </Background>
